@@ -1,0 +1,126 @@
+package integration.com.trailblazers.freewheelers.persistence;
+
+
+import com.trailblazers.freewheelers.mappers.PaidOrderMapper;
+import com.trailblazers.freewheelers.mappers.ReserveOrderMapper;
+import com.trailblazers.freewheelers.model.PaidOrder;
+import com.trailblazers.freewheelers.model.ReserveOrder;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.util.Date;
+import java.util.List;
+
+import static java.util.Arrays.asList;
+import static org.hamcrest.Matchers.hasItem;
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.mock;
+
+public class PaidOrderMapperTest extends MapperTestBase {
+    private PaidOrderMapper paidOrderMapper;
+    private ReserveOrderMapper reserveOrderMapper;
+
+    @Before
+    public void setUp() throws Exception {
+        super.setUp();
+        paidOrderMapper = getSqlSession().getMapper(PaidOrderMapper.class);
+<<<<<<< .mine
+        reserveOrderMapper = getSqlSession().getMapper(ReserveOrderMapper.class);
+=======
+>>>>>>> .r481
+    }
+
+    @Test
+    public void shouldInsertAndGetPaidOrderInfo() {
+
+        Long accountId = 1L;
+        PaidOrder paidOrder = new PaidOrder();
+        paidOrder.setAccount_id(accountId);
+        paidOrder.setOrders(asList(mock(ReserveOrder.class)));
+        paidOrderMapper.savePaidOrderInfo(paidOrder);
+        Integer paidOrderId = paidOrderMapper.getLastPayId();
+        paidOrder.setPay_id(paidOrderId);
+
+        PaidOrder expectedPaidOrder = paidOrderMapper.getByPaidOrderId(paidOrderId);
+        assertThat(expectedPaidOrder.getAccount_id(), is(paidOrder.getAccount_id()));
+        assertThat(expectedPaidOrder.getPay_id(), is(paidOrder.getPay_id()));
+        assertThat(expectedPaidOrder.getNet_total(), is(paidOrder.getNet_total()));
+        assertThat(expectedPaidOrder.getGross_total(), is(paidOrder.getGross_total()));
+        assertThat(expectedPaidOrder.getVat(), is(paidOrder.getVat()));
+        assertThat(expectedPaidOrder.getDuty_tax(), is(paidOrder.getDuty_tax()));
+    }
+
+    @Test
+    public void shouldInsertAndGetReservedItemsGivenPaidOrder() throws Exception {
+        ReserveOrder reserveOrder = new ReserveOrder(2L, 1L, new Date());
+
+        PaidOrder paidOrder = new PaidOrder();
+        paidOrder.setAccount_id(2L);
+        paidOrder.setOrders(asList(reserveOrder));
+
+        reserveOrder.setOrder_id(1L);
+
+        paidOrderMapper.savePaidOrderInfo(paidOrder);
+        Integer pay_id = paidOrderMapper.getLastPayId();
+        paidOrderMapper.saveReservedItem(reserveOrder, pay_id);
+
+        List<ReserveOrder> orderList = paidOrderMapper.getReserveItems(pay_id);
+
+        assertThat(orderList, hasItem(reserveOrder));
+    }
+
+    @Test
+    public void shouldGetOnePaidOrder() throws Exception {
+        ReserveOrder reserveOrder = new ReserveOrder(2L, 1L, new Date());
+        ReserveOrder reserveOrder2 = new ReserveOrder(4L, 5L, new Date());
+
+        PaidOrder paidOrder = new PaidOrder();
+        paidOrder.setAccount_id(2L);
+        paidOrder.setOrders(asList(reserveOrder, reserveOrder2));
+
+        reserveOrder.setOrder_id(1L);
+        reserveOrder2.setOrder_id(3L);
+
+        paidOrderMapper.savePaidOrderInfo(paidOrder);
+        Integer pay_id = paidOrderMapper.getLastPayId();
+        paidOrderMapper.saveReservedItem(reserveOrder, pay_id);
+        paidOrderMapper.saveReservedItem(reserveOrder2, pay_id);
+
+        PaidOrder expectPaidOrder = paidOrderMapper.getByPaidOrderId(pay_id);
+
+        assertThat(expectPaidOrder.getOrders().size(), is(2));
+    }
+
+    @Test
+    public void shouldGetPaidOrderList() throws Exception {
+        ReserveOrder reserveOrder = new ReserveOrder(2L, 1L, new Date());
+        ReserveOrder reserveOrder2 = new ReserveOrder(4L, 5L, new Date());
+
+        PaidOrder paidOrder = new PaidOrder();
+        paidOrder.setAccount_id(2L);
+        paidOrder.setOrders(asList(reserveOrder));
+
+        PaidOrder paidOrder2 = new PaidOrder();
+        paidOrder2.setAccount_id(4L);
+        paidOrder2.setOrders(asList(reserveOrder2));
+
+        reserveOrder.setOrder_id(167L);
+        reserveOrder2.setOrder_id(389L);
+
+        paidOrderMapper.savePaidOrderInfo(paidOrder);
+        Integer pay_id = paidOrderMapper.getLastPayId();
+
+        paidOrderMapper.savePaidOrderInfo(paidOrder2);
+        Integer pay_id2 = paidOrderMapper.getLastPayId();
+
+        paidOrderMapper.saveReservedItem(reserveOrder, pay_id);
+        paidOrderMapper.saveReservedItem(reserveOrder2, pay_id2);
+
+        List<PaidOrder> paidOrders = paidOrderMapper.getAllPaidOrders();
+
+        assertTrue(paidOrders.contains(paidOrder));
+        assertTrue(paidOrders.contains(paidOrder2));
+    }
+}

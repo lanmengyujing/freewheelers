@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repo/twu31proj1/!svn/ver/477/trunk/src/main/webapp/WEB-INF/views/pay
+END
+failurePage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/twu31proj1/!svn/ver/440/trunk/src/main/webapp/WEB-INF/views/pay/failurePage.jsp
+END
+successPage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/twu31proj1/!svn/ver/440/trunk/src/main/webapp/WEB-INF/views/pay/successPage.jsp
+END
+itemOutOfStock.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repo/twu31proj1/!svn/ver/440/trunk/src/main/webapp/WEB-INF/views/pay/itemOutOfStock.jsp
+END
+creditCardPayment.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repo/twu31proj1/!svn/ver/477/trunk/src/main/webapp/WEB-INF/views/pay/creditCardPayment.jsp
+END

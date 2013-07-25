@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/twu31proj1/!svn/ver/495/trunk/src/test/java/com/trailblazers/freewheelers/service/impl
+END
+AccountServiceImplTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repo/twu31proj1/!svn/ver/429/trunk/src/test/java/com/trailblazers/freewheelers/service/impl/AccountServiceImplTest.java
+END
+TaxServiceImplTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repo/twu31proj1/!svn/ver/343/trunk/src/test/java/com/trailblazers/freewheelers/service/impl/TaxServiceImplTest.java
+END
+ItemServiceImplTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repo/twu31proj1/!svn/ver/485/trunk/src/test/java/com/trailblazers/freewheelers/service/impl/ItemServiceImplTest.java
+END
+MailServiceImplTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repo/twu31proj1/!svn/ver/456/trunk/src/test/java/com/trailblazers/freewheelers/service/impl/MailServiceImplTest.java
+END
+CreditCardServiceImplTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repo/twu31proj1/!svn/ver/460/trunk/src/test/java/com/trailblazers/freewheelers/service/impl/CreditCardServiceImplTest.java
+END
+HttpRequestServiceTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repo/twu31proj1/!svn/ver/441/trunk/src/test/java/com/trailblazers/freewheelers/service/impl/HttpRequestServiceTest.java
+END
+ImageUploadServiceImplTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repo/twu31proj1/!svn/ver/485/trunk/src/test/java/com/trailblazers/freewheelers/service/impl/ImageUploadServiceImplTest.java
+END
+ReserveOrderServiceImplTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repo/twu31proj1/!svn/ver/494/trunk/src/test/java/com/trailblazers/freewheelers/service/impl/ReserveOrderServiceImplTest.java
+END
+PaidOrderServiceImplTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repo/twu31proj1/!svn/ver/495/trunk/src/test/java/com/trailblazers/freewheelers/service/impl/PaidOrderServiceImplTest.java
+END
+PaymentProcessorTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/twu31proj1/!svn/ver/460/trunk/src/test/java/com/trailblazers/freewheelers/service/impl/PaymentProcessorTest.java
+END

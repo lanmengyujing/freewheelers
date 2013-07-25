@@ -1,0 +1,1 @@
+alter table reserve_order add column transaction_id character varying(30);

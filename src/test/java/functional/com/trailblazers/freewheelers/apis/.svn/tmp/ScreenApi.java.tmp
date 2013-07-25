@@ -1,0 +1,288 @@
+package functional.com.trailblazers.freewheelers.apis;
+
+import com.trailblazers.freewheelers.model.Address;
+import functional.com.trailblazers.freewheelers.helpers.HomeTable;
+import functional.com.trailblazers.freewheelers.helpers.ManageItemTable;
+import functional.com.trailblazers.freewheelers.helpers.OrderTable;
+import functional.com.trailblazers.freewheelers.helpers.URLs;
+import org.hamcrest.Matchers;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.math.BigDecimal;
+import java.util.List;
+
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.Matchers.isEmptyOrNullString;
+import static org.hamcrest.Matchers.not;
+import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
+
+public class ScreenApi {
+    private WebDriver driver;
+    private String userDetails;
+    private String itemDetails;
+
+    public ScreenApi(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    public void shows_error_alert(String expectedMessage) {
+        expectMessageWithClass(expectedMessage, "alert-error");
+    }
+
+    public void retain_user_phone_number(String phonenumer) {
+        assertThat(driver.findElement(By.id("fld_phoneNumber")).getAttribute("value"), is(phonenumer));
+    }
+
+    public void shows_error(String expectedMessage) {
+        expectMessageWithClass(expectedMessage, "text-error");
+    }
+
+    public void shows_message(String expectedMessage) {
+        expectMessageWithClass(expectedMessage, "alert");
+    }
+
+    public void shows_in_navbar(String expectedMessage) {
+        expectMessageWithClass(expectedMessage, "navbar-text");
+    }
+
+    public ScreenApi shows_profile_for(String name) {
+        (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver d) {
+                userDetails = driver.findElement(By.id("user-details")).getText();
+                return userDetails != null;
+            }
+        });
+
+        userDetails = driver.findElement(By.id("user-details")).getText();
+
+        assertThat(userDetails, containsString(name));
+        return this;
+    }
+
+    public ScreenApi shows_login() {
+        assertThat(driver.getCurrentUrl(), is(URLs.login()));
+        return this;
+    }
+
+    public ScreenApi shows_admin_profile() {
+        assertThat(driver.getCurrentUrl(), is(URLs.admin()));
+        return this;
+    }
+
+    public ScreenApi shows_in_manage_item_list(String item) {
+        assertNumberOfRows(1, ManageItemTable.nameFieldFor(item));
+        return this;
+    }
+
+    public ScreenApi shows_not_in_manage_item_list(String item) {
+        assertNumberOfRows(0, ManageItemTable.nameFieldFor(item));
+        return this;
+    }
+
+    public ScreenApi should_list_item(String item) {
+        assertNumberOfRows(1, HomeTable.nameFieldFor(item));
+        return this;
+    }
+
+    public ScreenApi should_not_in_ordered_list(String item) {
+        assertNumberOfRows(0, HomeTable.nameFieldFor(item));
+        return this;
+    }
+
+    public ScreenApi should_not_list_item(String item) {
+        assertNumberOfRows(0, HomeTable.nameFieldFor(item));
+        return this;
+    }
+
+    public ScreenApi there_should_be_an_order(final String item, String state) {
+
+        (new WebDriverWait(driver, 20)).until(new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver d) {
+                return driver.findElement(OrderTable.selectFor(item)).isDisplayed();
+            }
+        });
+
+        WebElement select = driver.findElement(OrderTable.selectFor(item));
+        String selected = new Select(select).getFirstSelectedOption().getText();
+
+        assertThat(selected, is(state));
+        return this;
+    }
+
+    private void assertNumberOfRows(int expectedRows, By selector) {
+        List<WebElement> elements = driver.findElements(selector);
+        assertThat(elements.size(), is(expectedRows));
+    }
+
+    private ScreenApi expectMessageWithClass(String expectedMessage, final String messageClass) {
+
+        (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+            @Override
+            public Boolean apply(WebDriver webDriver) {
+                return driver.findElement(By.className(messageClass)).getText() != null;
+            }
+        });
+        String errorMessage = driver.findElement(By.className(messageClass)).getText();
+
+        assertThat(errorMessage, containsString(expectedMessage));
+        return this;
+    }
+
+    public ScreenApi should_show_address_details(Address address) {
+
+        (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver d) {
+                userDetails = driver.findElement(By.id("user-details")).getText();
+                return userDetails != null;
+            }
+        });
+
+        assertThat(userDetails, containsString(address.getCity()));
+        return this;
+    }
+
+    public ScreenApi shouldShowAccessDeniedPage() {
+        (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver d) {
+                String accessDeniedDiv = driver.findElement(By.id("http_403")).getText();
+                return accessDeniedDiv != null;
+            }
+        });
+
+        String accessDeniedDiv = driver.findElement(By.id("http_403")).getText();
+
+        assertThat(accessDeniedDiv, containsString("403 Your access is denied"));
+        return this;
+    }
+
+    public ScreenApi display_empty_shopping_cart() {
+        assertTrue(driver.findElements(By.className("cart")).size() == 0);
+        assertTrue(driver.findElements(By.id("toPaymentByCreditCardDisabled")).size() == 1);
+        return this;
+    }
+
+    public void should_display(String message) {
+        String reserveMsg = driver.findElement(By.className("reservation_status")).getText();
+        assertThat(reserveMsg, containsString(message));
+    }
+
+    public ScreenApi should_display_duty_tax(BigDecimal dutyTaxValue) {
+        String dutyTaxContainer = driver.findElement(By.className("dutyTax")).getText();
+        assertThat(dutyTaxContainer, containsString(String.valueOf(dutyTaxValue)));
+        return this;
+    }
+
+    public ScreenApi shows_credit_card_payment_page() {
+        (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+            @Override
+            public Boolean apply(WebDriver webDriver) {
+                return driver.getTitle() != null;
+            }
+        });
+        assertThat(driver.getTitle(), is("Credit Card Payment"));
+        return this;
+    }
+
+    public ScreenApi shows_payment_success() {
+        (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+            @Override
+            public Boolean apply(WebDriver webDriver) {
+                return driver.getTitle() != null;
+            }
+        });
+        assertThat(driver.getTitle(), is("Payment Success"));
+        return this;
+    }
+
+    public ScreenApi shows_payment_failure() {
+        (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+            @Override
+            public Boolean apply(WebDriver webDriver) {
+                return driver.getTitle() != null;
+            }
+        });
+        assertThat(driver.getTitle(), is("Credit Card Payment"));
+        shows_error_alert("Your credit card was rejected!");
+        return this;
+    }
+
+    public ScreenApi should_display_vat(BigDecimal vatValue) {
+        String vat = driver.findElement(By.id("vat")).getText();
+        assertThat(vat, containsString(String.valueOf(vatValue)));
+        return this;
+    }
+
+    public void retain_user_email(String email) {
+        assertThat(driver.findElement(By.id("fld_email")).getAttribute("value"), is(email));
+    }
+
+    public void should_display_image(String imageName) {
+        (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+            @Override
+            public Boolean apply(WebDriver webDriver) {
+                return !driver.findElement(By.id("image_info")).getText().isEmpty();
+            }
+        });
+        String itemForm = driver.findElement(By.id("image_info")).getText();
+        assertThat(itemForm, containsString(String.valueOf(imageName)));
+    }
+
+    public void shows_in_manage_item_list_with_image(String name, String imageName) {
+        WebElement element = driver.findElement(ManageItemTable.imageFieldFor(name));
+        assertThat(element.getAttribute("src"), containsString(imageName));
+    }
+
+    public ScreenApi should_show_personal_info(String phoneNumber, String emailAddress) {
+
+        (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver d) {
+                userDetails = driver.findElement(By.id("user-details")).getText();
+                return userDetails != null;
+            }
+        });
+
+        assertThat(userDetails, containsString(phoneNumber));
+        assertThat(userDetails, containsString(emailAddress));
+
+        return this;
+    }
+
+    //TODO: transaction id
+    public void shows_all_the_orders() {
+       // WebElement transactionId = driver.findElement(By.className("transaction-id"));
+        List<WebElement> itemNames = driver.findElements(By.className("item-name"));
+
+        assertThat(itemNames.get(0).getText(), not(isEmptyOrNullString()));
+    }
+
+    public ScreenApi should_display_details_in_a_dialog(String name) {
+
+        (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver d) {
+                itemDetails = driver.findElement(By.id("item_name")).getText();
+                return itemDetails != null;
+            }
+        });
+
+        assertThat(itemDetails, is(name));
+        return this;
+    }
+<<<<<<< .mine
+
+    public void should_not_display_orders_in_shopping_cart() {
+        assertThat(driver.findElements(By.className("paid-orders")).size(), is(0));
+    }
+=======
+
+    public void redirect_to_shopping_cart() {
+        assertThat(driver.getCurrentUrl(), Matchers.containsString("shoppingCart"));
+    }
+>>>>>>> .r481
+}

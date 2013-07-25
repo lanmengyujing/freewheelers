@@ -1,0 +1,19 @@
+#details_modal_holder .modal-body {
+    max-height: 800px;
+
+}
+
+#details_modal_holder {
+    width: 1000px;
+    margin: 50px 0 0 -400px;
+}
+
+#modal-header {
+    text-align: center;
+    padding: 10px 10px
+}
+#modal_footer{
+    clear: both; padding: 0px 0px;
+    float: right;
+    text-align: right;
+}

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/twu31proj1/!svn/ver/467/trunk/src/main/webapp/WEB-INF/email
+END
+invoice.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repo/twu31proj1/!svn/ver/458/trunk/src/main/webapp/WEB-INF/email/invoice.ftl
+END
+orderStatus.ftl
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/twu31proj1/!svn/ver/467/trunk/src/main/webapp/WEB-INF/email/orderStatus.ftl
+END

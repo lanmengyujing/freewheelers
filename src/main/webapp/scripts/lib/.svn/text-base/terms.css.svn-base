@@ -1,0 +1,5 @@
+div#terms_and_conditions {
+    width: 70%;
+    margin:0 auto;
+}
+

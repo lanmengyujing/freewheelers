@@ -1,0 +1,80 @@
+10
+
+dir
+495
+http://ops.university.thoughtworks.com/repo/twu31proj1/trunk/src/main/webapp/WEB-INF
+http://ops.university.thoughtworks.com/repo/twu31proj1
+
+
+
+2013-07-11T06:11:37.677116Z
+495
+jingliu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+843859fd-cf44-46d8-9a24-7d91b6ff617c
+
+spring
+dir
+
+tld
+dir
+
+config
+dir
+
+email
+dir
+
+web.xml
+file
+
+
+
+
+2013-07-05T05:35:37.000000Z
+fc2a0b06aa33a62e81df195dd62d44d7
+2013-07-04T06:03:57.429856Z
+429
+dharuo
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2348
+
+classes
+dir
+
+views
+dir
+

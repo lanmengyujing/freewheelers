@@ -1,0 +1,80 @@
+10
+
+dir
+495
+http://ops.university.thoughtworks.com/repo/twu31proj1/trunk/src/main/java/com/trailblazers/freewheelers
+http://ops.university.thoughtworks.com/repo/twu31proj1
+
+
+
+2013-07-11T06:11:37.677116Z
+495
+jingliu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+843859fd-cf44-46d8-9a24-7d91b6ff617c
+
+model
+dir
+
+service
+dir
+
+mail
+dir
+
+mappers
+dir
+
+security
+dir
+
+FreeWheelersServer.java
+file
+
+
+
+
+2013-07-03T08:47:03.000000Z
+bb4ebfa60b5acefa6eac201f00b3d93e
+2013-02-08T09:37:56.910380Z
+134
+mhofer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1158
+
+web
+dir
+

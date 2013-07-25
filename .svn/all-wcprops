@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/repo/twu31proj1/!svn/ver/495/trunk
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/repo/twu31proj1/!svn/ver/260/trunk/.gitignore
+END
+codeReview.sh
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/repo/twu31proj1/!svn/ver/440/trunk/codeReview.sh
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/repo/twu31proj1/!svn/ver/319/trunk/README
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/repo/twu31proj1/!svn/ver/463/trunk/build.xml
+END

@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repo/twu31proj1/!svn/ver/495/trunk/src/main/webapp/WEB-INF/views
+END
+itemDetails.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/twu31proj1/!svn/ver/493/trunk/src/main/webapp/WEB-INF/views/itemDetails.jsp
+END
+reserveOrderWithNoCountrySetup.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repo/twu31proj1/!svn/ver/440/trunk/src/main/webapp/WEB-INF/views/reserveOrderWithNoCountrySetup.jsp
+END
+header.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/twu31proj1/!svn/ver/477/trunk/src/main/webapp/WEB-INF/views/header.jsp
+END
+home.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repo/twu31proj1/!svn/ver/492/trunk/src/main/webapp/WEB-INF/views/home.jsp
+END
+login.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repo/twu31proj1/!svn/ver/440/trunk/src/main/webapp/WEB-INF/views/login.jsp
+END
+adminProfile.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/twu31proj1/!svn/ver/495/trunk/src/main/webapp/WEB-INF/views/adminProfile.jsp
+END
+logout.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/twu31proj1/!svn/ver/440/trunk/src/main/webapp/WEB-INF/views/logout.jsp
+END
+orderSummary.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/twu31proj1/!svn/ver/440/trunk/src/main/webapp/WEB-INF/views/orderSummary.jsp
+END
+accessDenied.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/twu31proj1/!svn/ver/440/trunk/src/main/webapp/WEB-INF/views/accessDenied.jsp
+END
+itemList.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repo/twu31proj1/!svn/ver/478/trunk/src/main/webapp/WEB-INF/views/itemList.jsp
+END
+footer.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repo/twu31proj1/!svn/ver/491/trunk/src/main/webapp/WEB-INF/views/footer.jsp
+END
+userProfile.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repo/twu31proj1/!svn/ver/477/trunk/src/main/webapp/WEB-INF/views/userProfile.jsp
+END
+shoppingCart.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repo/twu31proj1/!svn/ver/486/trunk/src/main/webapp/WEB-INF/views/shoppingCart.jsp
+END

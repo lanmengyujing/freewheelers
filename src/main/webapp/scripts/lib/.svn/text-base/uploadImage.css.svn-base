@@ -1,0 +1,10 @@
+#remove{
+    display: none;
+}
+
+#progress{
+    display: none;
+    width: 200px;
+    margin-left: 15px;
+    margin-bottom: 0px;
+}

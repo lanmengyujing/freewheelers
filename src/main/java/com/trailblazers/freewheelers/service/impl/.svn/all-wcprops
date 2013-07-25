@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repo/twu31proj1/!svn/ver/495/trunk/src/main/java/com/trailblazers/freewheelers/service/impl
+END
+AccountServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repo/twu31proj1/!svn/ver/441/trunk/src/main/java/com/trailblazers/freewheelers/service/impl/AccountServiceImpl.java
+END
+TaxServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repo/twu31proj1/!svn/ver/441/trunk/src/main/java/com/trailblazers/freewheelers/service/impl/TaxServiceImpl.java
+END
+ItemServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repo/twu31proj1/!svn/ver/460/trunk/src/main/java/com/trailblazers/freewheelers/service/impl/ItemServiceImpl.java
+END
+MailServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repo/twu31proj1/!svn/ver/456/trunk/src/main/java/com/trailblazers/freewheelers/service/impl/MailServiceImpl.java
+END
+CreditCardServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repo/twu31proj1/!svn/ver/475/trunk/src/main/java/com/trailblazers/freewheelers/service/impl/CreditCardServiceImpl.java
+END
+HttpRequestService.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repo/twu31proj1/!svn/ver/402/trunk/src/main/java/com/trailblazers/freewheelers/service/impl/HttpRequestService.java
+END
+ImageUploadServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repo/twu31proj1/!svn/ver/441/trunk/src/main/java/com/trailblazers/freewheelers/service/impl/ImageUploadServiceImpl.java
+END
+ReserveOrderServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repo/twu31proj1/!svn/ver/494/trunk/src/main/java/com/trailblazers/freewheelers/service/impl/ReserveOrderServiceImpl.java
+END
+PaidOrderServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/twu31proj1/!svn/ver/495/trunk/src/main/java/com/trailblazers/freewheelers/service/impl/PaidOrderServiceImpl.java
+END
+PaymentProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repo/twu31proj1/!svn/ver/475/trunk/src/main/java/com/trailblazers/freewheelers/service/impl/PaymentProcessor.java
+END

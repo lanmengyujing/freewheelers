@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repo/twu31proj1/!svn/ver/494/trunk/src/test/java/com/trailblazers/freewheelers/model
+END
+CreditCardPaymentTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repo/twu31proj1/!svn/ver/460/trunk/src/test/java/com/trailblazers/freewheelers/model/CreditCardPaymentTest.java
+END
+AddressTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repo/twu31proj1/!svn/ver/441/trunk/src/test/java/com/trailblazers/freewheelers/model/AddressTest.java
+END
+AccountValidationTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repo/twu31proj1/!svn/ver/443/trunk/src/test/java/com/trailblazers/freewheelers/model/AccountValidationTest.java
+END
+ReserveOrderTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repo/twu31proj1/!svn/ver/441/trunk/src/test/java/com/trailblazers/freewheelers/model/ReserveOrderTest.java
+END
+ItemValidationTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repo/twu31proj1/!svn/ver/267/trunk/src/test/java/com/trailblazers/freewheelers/model/ItemValidationTest.java
+END
+PaidOrderTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repo/twu31proj1/!svn/ver/494/trunk/src/test/java/com/trailblazers/freewheelers/model/PaidOrderTest.java
+END
+PaymentInfoTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repo/twu31proj1/!svn/ver/461/trunk/src/test/java/com/trailblazers/freewheelers/model/PaymentInfoTest.java
+END
+AccountTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repo/twu31proj1/!svn/ver/441/trunk/src/test/java/com/trailblazers/freewheelers/model/AccountTest.java
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repo/twu31proj1/!svn/ver/467/trunk/src/main/java/com/trailblazers/freewheelers/mail
+END
+OrderNotificationMailContent.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repo/twu31proj1/!svn/ver/467/trunk/src/main/java/com/trailblazers/freewheelers/mail/OrderNotificationMailContent.java
+END
+InvoiceMailContentRender.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repo/twu31proj1/!svn/ver/459/trunk/src/main/java/com/trailblazers/freewheelers/mail/InvoiceMailContentRender.java
+END
+MailContentRender.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repo/twu31proj1/!svn/ver/455/trunk/src/main/java/com/trailblazers/freewheelers/mail/MailContentRender.java
+END
+HtmlMailBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repo/twu31proj1/!svn/ver/454/trunk/src/main/java/com/trailblazers/freewheelers/mail/HtmlMailBuilder.java
+END

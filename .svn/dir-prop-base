@@ -1,0 +1,14 @@
+K 10
+svn:ignore
+V 65
+.idea
+bin
+bin-idea
+out
+cobertura.ser
+dist
+*.iml
+.DS_Store
+*.diff
+
+END

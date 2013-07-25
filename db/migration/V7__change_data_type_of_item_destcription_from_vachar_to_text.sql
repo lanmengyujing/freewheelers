@@ -1,0 +1,1 @@
+ALTER TABLE item ALTER COLUMN description TYPE text;
